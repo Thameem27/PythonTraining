@@ -1,6 +1,6 @@
 #First task, Nineth Task with While Loop with & without getting invoked
 import random
-print("Welcome, To the Guess A Number Game")
+print("Welcome, To the Guess The Number Game")
 attempt = int(input("Choose the number of attempts between 1-10 in which you can guess the Number => "))
 constant = random.randint(1, 100)
 i = 1
