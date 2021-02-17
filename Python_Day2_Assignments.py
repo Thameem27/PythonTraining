@@ -39,6 +39,29 @@ empDict = {'Company': 'Apple', 'Designation': 'Senior Consultant', 'Department':
 for key, value in empDict.items():
     print("Value " + value, " Belongs to " + key)
 
+# Task 4
+"""
+Code of Else clause being invoked in a while loop and the opposite too.
+"""
+# Else clause invoked
+num = int(input("Enter your number: "))
+while num < 6:
+    print("Number : " + num)
+    num += 1
+else:
+    print("Please enter a number less than 6")
+
+# Else clause not invoked
+num = int(input("Enter your number: "))
+while num < 8:
+    print("Num : " + num)
+    num += 1
+    if num == 8:
+      break
+else:
+    print("Enter a number less than 8")
+    
+    
 # Task 5
 # """
 # Build a function that accepts two numbers and returns their addition
@@ -119,3 +142,18 @@ numbersquare = [number**2 for number in numList if number % 2 == 1]
 
 for oddnumbersq in numbersquare:
     print("Odd Square Value is "+str(oddnumbersq))
+
+
+# PEP 20 Favourite Line
+# If the implementation is hard to explain, it's a bad idea.
+
+# Task 11
+""" Lambda Expression Demo """
+total = int(input("Enter a Total : "))
+count = int(input("Enter a Count : "))
+
+print(" Below is the average of these ")
+
+average = lambda total, count : total/count
+
+print(average(total, count))
