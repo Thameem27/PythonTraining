@@ -1,0 +1,18 @@
+<!doctype html>
+
+<title>Flask Demo</title>
+
+<h1 style="color:Orange;font-size:500%;text-align:center;">Welcome to MySpace </h1>
+
+
+{% if name %}
+
+  <h1>Hello <span style="color: #ff0000">{{ name }} </span> !</h1>
+  <p style="color:rgb(16, 195, 255);font-size:200%;"> Demo when username is passed.</p>
+
+{% else %}
+
+  <h2 style="color:Tomato;font-size:300%;text-align:center;">Hello World</h2>
+  <p style="color:rgb(50, 200, 68);font-size:200%;"> Demo when username is not passed.</p>
+
+{% endif %}
