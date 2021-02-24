@@ -1,5 +1,5 @@
 from flask import Flask, request
-from flask_restful import reqparse, Api, Resource
+from flask_restful import reqparse, Api, Resource, abort
 
 app = Flask(__name__)
 api = Api(app)
@@ -25,9 +25,9 @@ vegdata = [
         ]
          
 
-class VegetableData(Resource):
-    def get(self):
-        return vegdata
+# class VegetableData(Resource):
+    # def get(self):
+        # return vegdata
 
 class VegetableList(Resource):
     def get(self):
@@ -60,10 +60,11 @@ class VegetableData(Resource):
             
             
     def put(self, veg_id):
-        for index, listItem in enumerate(groceries):
+        for index, listItem in enumerate(vegdata):
             if veg_id == listItem['vegname']:
-                listItem['quantity'] = request.json['quantity']
-                return veg_id + ' is Updated'
+                Itemdict=request.get_json()
+                listItem['Quantity'] = Itemdict.get('Quantity')
+                return veg_id + ' is Updated' +' with '+ Itemdict.get('Quantity')
         else:
             abort(404, message=f"{veg_id} is Not Available in the list")     
             
