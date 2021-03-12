@@ -1,0 +1,24 @@
+<html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'ninjas/style.css' %}">
+<body>
+    {% if devs %}
+        <table border="5" style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>Experience</th>
+                <th>Country</th>
+            </tr>
+            {% for dev in devs %}
+            <tr>
+                <td><a href="{% url 'ninjas:details' dev.id %}">{{dev.Name}}</a></td>
+                <td>{{ dev.Experience }}</td>
+                <td>{{ dev.Country }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>Developer Doesnt exist in the Database.</h1>    
+    {% endif %}
+</body>
+</html>
