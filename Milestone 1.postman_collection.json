@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "4c4336f3-01b9-4865-90db-17086d2b5930",
+		"name": "Milestone 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delete Customer",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Feb@22",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Samuel",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Bearer",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOjIsImV4cCI6MTYxNTc0NzgzNH0.KvOqx9p206NbW5T03dqQ4AhH7olLv2wK9mTWx3ZByiE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Account_type\": \"CURRENT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/updateaccount/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updateaccount",
+						"2"
+					]
+				},
+				"description": "Delete Customer Details"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Customer to DB",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Feb@22",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Samuel",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Bearer",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOjIsImV4cCI6MTYxNTc0NzgzNH0.KvOqx9p206NbW5T03dqQ4AhH7olLv2wK9mTWx3ZByiE"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Name\": \"Leonardo Dicpario\",\r\n\"Username\": \"Ledi@887\",\r\n\"Password\": \"Machine@908\",\r\n\"Address\": \"Hyderabad\",\r\n\"State\": \"TS\",\r\n\"Country\": \"India\",\r\n\"Email_address\": \"Ledi56@yahoo.co.in\",\r\n\"PAN\": \"ABEKK3234\",\r\n\"Contact_no\": \"9849033228\",\r\n\"DOB\": \"01/01/1999\",\r\n\"Account_type\": \"SAVING\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/addcustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"addcustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer Details",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Feb@22",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Samuel",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Bearer",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOjIsImV4cCI6MTYxNTc0NzgzNH0.KvOqx9p206NbW5T03dqQ4AhH7olLv2wK9mTWx3ZByiE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Password\": \"Mind@311\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/updateaccount/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updateaccount",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Customer",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "H",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "joe",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/viewcustomer/darob28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"viewcustomer",
+						"darob28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Customer_id\": \"1\",\r\n\"Name\": \"joe\",\r\n\"Loan_type\": \"HOME\",\r\n\"Loan_amount\": \"2000000\",\r\n\"Loan_date\": \"01/01/2021\",\r\n\"Rate_of_interest\": \"7.1\",\r\n\"Duration\": \"56\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/ApplyLoan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"ApplyLoan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Customer",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "joe",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mind@311",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Bearer",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOjEsImV4cCI6MTYxNjA3NDkxOX0.kgCWSFyGpzcNfUbaJN4Hnz4ATsreIpZpshNDGHkPjbw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/customer/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customer",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Customer Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Bearer",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOjEsImV4cCI6MTYxNjA3NDkxOX0.kgCWSFyGpzcNfUbaJN4Hnz4ATsreIpZpshNDGHkPjbw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"joe\",\r\n    \"password\" : \"Mind@311\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewLoan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "joe",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mind@311",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Bearer",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOjEsImV4cCI6MTYxNjA3NDkxOX0.kgCWSFyGpzcNfUbaJN4Hnz4ATsreIpZpshNDGHkPjbw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:5000//GetLoanDetail/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"",
+						"GetLoanDetail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
